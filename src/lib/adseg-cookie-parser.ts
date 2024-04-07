@@ -100,7 +100,7 @@ export class AdsegCookieParser {
             // only assign once
             if (undefined == obj[key]) {
                 if(AdsegCookieParser.allowed.includes(key)) {
-                    obj[key] = AdsegCookieParser.decode(val);
+                    obj[key] = AdsegCookieParser.decode(val).split('|')[1];
                 }else if(AdsegCookieParser.allow_all){
                     obj[key] = decodeURIComponent(val);
                 }
