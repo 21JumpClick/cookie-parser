@@ -1,28 +1,7 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "outDir": "./dist",
-    "pretty": true,
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "target": "es6",
-    "lib": ["es6", "dom"],
-    "types": ["node"]
+    "baseUrl": "."
   },
-  "files": [
-    "src/index.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": {
-    "formatOnSave": false,
-    "rewriteTsconfig": false
-  }
+  "exclude": ["node_modules", "lib", "**/.*/"]
 }

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "baseUrl": "src",
+    "target": "ESNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strict": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "lib": [
+      "ES2021",
+      "DOM",
+      "esnext"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.json"
+  ]
+}

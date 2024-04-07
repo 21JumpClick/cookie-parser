@@ -5,7 +5,7 @@ export class OverrideCookie {
     private static cookies_allowed: any = [];
 
     constructor(private options) {
-        OverrideCookie.cookies_allowed = [...this.options.cookie.allowed];
+        OverrideCookie.cookies_allowed = [...(this.options.cookie.allowed ||[])];
 
         this.cipher = new Encryptor(this.options.encryptor);
     }

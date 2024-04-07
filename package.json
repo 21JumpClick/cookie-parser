@@ -1,6 +1,6 @@
 {
-  "name": "crypto-parser-express",
-  "version": "1.0.4",
+  "name": "@21jumpclick/cookie-parser",
+  "version": "2.0.2",
   "engines": {
     "node": ">=8.16.1",
     "npm": ">=6.4.1",
@@ -9,26 +9,33 @@
   "description": "Express Response Cookie override to add crypto cookie and cookie-parser module replacement",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w",
-    "test": "NODE_ENV=test node_modules/.bin/_mocha --exit -r tests/lib/spec-helper.js tests/"
+    "clean": "rimraf lib",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prebuild": "tsc",
+    "prepack": "npm run clean && npm run build",
+    "dev": "tsc -w"
   },
   "author": "Adolfo Segura Hall",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.7.9",
-    "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "cookie": "^0.4.0",
-    "debug": "^4.1.1",
-    "express": "^4.17.1",
-    "mocha": "^6.2.1",
-    "typescript": "^2.9.2",
-    "uuid": "^3.3.3"
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.5",
+    "@types/uuid": "^9.0.8",
+    "body-parser": "^1.20.2",
+    "chai": "^5.1.0",
+    "chai-http": "^4.4.0",
+    "concurrently": "^8.2.2",
+    "cookie": "^0.6.0",
+    "debug": "^4.3.4",
+    "express": "^4.19.2",
+    "mocha": "^10.4.0",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.4",
+    "uuid": "^9.0.1"
   },
   "dependencies": {
-    "node-laravel-encryptor": "^2.0.5"
+    "node-laravel-encryptor": "^3.0.2"
   },
   "keywords": [
     "laravel",
@@ -36,10 +43,5 @@
     "nodejs",
     "cookie",
     "cookie-parser"
-  ],
-  "homepage": "https://github.com/adsegura/crypto-parser-express/blob/master/README.md",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adsegura/crypto-parser-express.git"
-  }
+  ]
 }
