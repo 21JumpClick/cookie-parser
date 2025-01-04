@@ -1,6 +1,9 @@
 {
   "name": "@21jumpclick/cookie-parser",
-  "version": "2.0.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "2.4.0",
   "engines": {
     "node": ">=8.16.1",
     "npm": ">=6.4.1",
@@ -35,7 +38,8 @@
     "uuid": "^9.0.1"
   },
   "dependencies": {
-    "node-laravel-encryptor": "^3.0.2"
+    "php-serialize": "^4.1.1",
+    "socket.io": "^4.7.5"
   },
   "keywords": [
     "laravel",

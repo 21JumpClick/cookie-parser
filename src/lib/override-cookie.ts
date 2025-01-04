@@ -1,4 +1,4 @@
-import {Encryptor} from 'node-laravel-encryptor';
+import {Encryptor} from "./Encryptor";
 
 export class OverrideCookie {
     private cipher: Encryptor;
